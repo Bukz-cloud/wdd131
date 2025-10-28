@@ -10,7 +10,7 @@
 
 header {
     grid-column: 1/5;
-    background-color: rgb(56, 55, 55);
+    background-color: #333333;
     color: #fff;
     height: 50px;
     padding: 10px;
@@ -45,13 +45,13 @@ li a:hover {
 
 main {
     grid-column: 1/4;
-    background-color: lightgray;
+    background-color: rgb(223, 221, 221);
     padding: 10px;
     color: black;
 }
 
 aside {
-    background-color: #f5dbdb;
+    background-color: #f7ebeb;
     grid-column: 4/5;
     padding: 10px;
     color: black;
@@ -62,7 +62,7 @@ main, aside {
 }
 
 footer {
-    background-color: rgb(56, 55, 55);
+    background-color: #333333;
     grid-column: 1/5;
     text-align: center;
     padding: 10px;
