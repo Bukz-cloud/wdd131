@@ -27,6 +27,8 @@ header {
     padding: 10px;
     text-align: center;
     color: rgb(241, 234, 214);
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .list-bar {
