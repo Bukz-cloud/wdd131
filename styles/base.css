@@ -22,9 +22,8 @@ header {
     background-color: rgb(21, 45, 88)
 }
 
-header #course-title {
+#course-title {
     display: block;
-    font-size: 1.5rem;
     padding: 10px;
     text-align: center;
     color: rgb(241, 234, 214);
@@ -75,6 +74,7 @@ main {
     text-align: center;
     margin-bottom: 10px;
     padding: 10px;
+    font-size: 1.2rem;
 }
 
 .self {
@@ -88,16 +88,15 @@ p {
 
 .potch-heading {
     text-align: center;
+    font-size: 1.2rem;
+    background-color: #fff;
+    font-size: 1.2rem;
 }
 
 .card {
     border: 1px solid rgb(2, 2, 110);
     margin: 10px;
     border-radius: 10px;
-}
-
-.potch-heading {
-    background-color: #fff;
 }
 
 .self img {
@@ -132,6 +131,7 @@ p {
     text-align: center;
     margin-bottom: 50px;
     padding: 10px;
+    font-size: 1.2rem;
 }
 
 .web-items {
