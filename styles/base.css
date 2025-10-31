@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 400;
+}
+
+h1 {
+    font-size: 100;
+    text-align: center;
+    background-color: rgb(21, 45, 88);
+    color: white;
+    padding: 10px;
+}
+
+#course-title {
+    display: block;
+    font-size: large;
+    color: rgb(241, 234, 214);
+}
+
+.nav-bar {
+    background-color: rgb(218, 217, 214);
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: brown;
+}
+
+.card-holder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+}
+
+.card-me {
+    grid-column: 1/3;
+    border: 1px solid rgb(2, 2, 110);
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.me {
+    background-color:  rgb(21, 45, 88);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.self {
+    margin-bottom: 50px;
+}
+
+p {
+    margin: 10px;
+    line-height: 1.8;
+}
+
+.potch-heading {
+    text-align: center;
+}
+
+.card-web {
+    grid-column: 3/4;
+    border: 1px solid rgb(2, 2, 110);
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.potch-heading {
+    background-color: #fff;
+}
+
+.self img {
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: auto;
+    padding: 10px;
+}
+
+.potch-view {
+    float: left;
+    padding: 10px;
+}
+
+.potch-view img {
+    width: 150px;
+    height: auto;
+}
+
+.potch-view figcaption {
+    font-size: small;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+}
+
+.web-res {
+    background-color: rgb(21, 45, 88);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.web-items {
+    margin-left: 10px;
+}
+
+.web-items a {
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+li {
+    line-height: 1.8;
+}
+
+.web-items li a {
+    padding: 10px;
+    color: blue;
+}
+
+.web-items li a:hover {
+    color: brown;
+}
+
+footer {
+    background-color:  rgb(21, 45, 88);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#lastModified {
+    color: beige;
+}
+
