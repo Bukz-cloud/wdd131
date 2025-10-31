@@ -17,16 +17,20 @@ h1 {
     padding: 10px;
 }
 
+header {
+    width: 100%;
+    background-color: rgb(21, 45, 88)
+}
+
 header #course-title {
     display: block;
     font-size: 1.5rem;
     padding: 10px;
     text-align: center;
     color: rgb(241, 234, 214);
-    background-color: rgb(21, 45, 88)
 }
 
-.nav-bar {
+.list-bar {
     background-color: rgb(218, 217, 214);
     margin-bottom: 20px;
 }
@@ -37,7 +41,7 @@ ul {
     margin: 0;
 }
 
-.nav-items {
+.list-items {
     display: flex;
     justify-content: space-around;
     padding: 10px;
@@ -55,8 +59,9 @@ li a:hover {
 }
 
 main {
-    width: 80%px;
+    width: 95%;
     padding: 10px;
+    margin: auto;
 }
 
 .card-holder {
@@ -89,7 +94,6 @@ p {
     border: 1px solid rgb(2, 2, 110);
     margin: 10px;
     border-radius: 10px;
-    padding: 20px;
 }
 
 .potch-heading {
