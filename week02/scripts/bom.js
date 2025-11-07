@@ -1,15 +1,39 @@
-const input = document.querySelector("#favchap");
-const button = document.querySelector("button");
-const list = document.querySelector("_______");
+    const input = document.querySelector("#favchap");
+    const addButton = document.querySelector("button");
+    const closeButton = document.querySelector("#close-button");
+    const list = document.querySelector("#list");
 
-const li = document.createElement("li");
+    addButton.addEventListener("click", function() {
+      const chapterName = input.value.trim();
 
-const deleteButton = document.createElement("button");
+      if (chapterName === "") {
+        alert("Please enter a chapter name!");
+        input.focus();
+        return;
+      }
 
-li.textContent = input.value;
+      const li = document.createElement("li");
+      li.textContent = chapterName;
 
-deleteButton.textContent = "❌";
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "❌";
+      deleteButton.setAttribute("aria-label", `Remove ${chapterName}`);
 
-li.append(deleteButton);
+      li.append(deleteButton);
+      list.append(li);
 
-list.append(li);
+      deleteButton.addEventListener("click", function() {
+        list.removeChild(li);
+        input.focus();
+      });
+
+      input.value = "";
+      input.focus();
+    });
+
+    closeButton.addEventListener("click", function() {
+      if (confirm("Are you sure you want to remove all chapters?")) {
+        list.innerHTML = "";
+        input.focus();
+      }
+    });
