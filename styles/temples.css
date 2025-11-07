@@ -39,6 +39,7 @@ nav {
 .menu-1 {
     display: none;
     flex-direction: column;
+    background-color: rgb(46, 46, 82);
     position: absolute;
     top: 60px;
     right: 0;
@@ -57,7 +58,7 @@ nav {
 }
 
 .menu-1 a:hover {
-    color: rgb(135, 244, 157);
+    color: rgb(179, 244, 192);
 }
 
 #menu {
@@ -67,10 +68,12 @@ nav {
 
 #menu::before {
 	content: "≡";
+    color: #fff;
 }
 
 #menu.show::before {
 	content: "❌";
+    color: #fff;
 }
 
 .show + .menu-1 {
