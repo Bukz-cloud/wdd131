@@ -17,13 +17,12 @@ header {
     background-color: rgb(67, 5, 117);
     display: grid;
     grid-gap: 1rem;
-    color: black;
     text-align: center;
     padding: 20px;
     border: 1px solid black;
 }
 
-.menu-bar {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
