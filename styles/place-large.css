@@ -13,8 +13,13 @@
 
     .weather-card {
         position: absolute;
-        top: 50%;
+        top: 30%;
         right: 5%;
         width: 260px;
     }
+
+    .weather-heading::after {
+    font-size: 2rem;
+    font-weight: bold;
+  }
 }

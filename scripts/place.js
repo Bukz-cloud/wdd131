@@ -23,10 +23,6 @@ function displayWindChill() {
 
 displayWindChill();
 
-// LAST MODIFIED FOOTER
-//document.getElementById("lastModified").textContent = document.lastModified;
-
-
 const currentYear = new Date().getFullYear();
 document.getElementById("currentyear").innerHTML = `${currentYear}`;
 document.getElementById("lastModified").innerHTML = `Last modified: ${document.lastModified}`;

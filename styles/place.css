@@ -25,6 +25,8 @@ header {
 .hero img {
     width: 100%;
     display: block;
+    height: auto;
+    object-fit: cover;
 }
 
 .card {
@@ -42,12 +44,13 @@ header {
     padding: 0.4rem;
     margin-top: 0;
     position: relative;
+    text-align: center;
 }
 
-.weather-icon::before {
-    content: "🌤️";
-    margin-left: 8px;
-    font-size: 1.3rem;
+.weather-card img {
+    width: 5rem;
+    font-size: .5rem;
+    margin: 1rem;
 }
 
 footer {
