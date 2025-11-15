@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout of Madagascar beauty and overview of the weather and data.">
+    <meta name="author" content="Olubukade John Adesanmi">
+    <title>Madagascar</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Madagascar</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/lemur-small.webp" media="(max-width: 500px)">
+                <source srcset="images/lemur-large.webp" media="(max-width: 1000px)">
+                <img src="images/lemur-larger.webp" alt="Lemurs">
+            </picture>
+
+            <div class="data-card card">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 587,041 sq km</li>
+                    <li><strong>Population:</strong> 27,691,018</li>
+                    <li><strong>Capital:</strong> Antananarivo</li>
+                    <li><strong>Languages:</strong> Malagasy, French</li>
+                    <li><strong>Currency:</strong> Malagasy Ariary</li>
+                    <li><strong>Time Zone:</strong> UTC+3</li>
+                    <li><strong>Calling Code:</strong> +261</li>
+                    <li><strong>Internet TLD:</strong> .mg</li>
+                </ul>
+            </div>
+
+            <div class="weather-card card">
+                <h2>Weather <span class="weather-icon"></span></h2>
+                <p><strong>Temperature:</strong> <span id="temp">10</span>°C</p>
+                <p><strong>Conditions:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span> ⌛ Olubukade John Adesanmi ⌛ South Africa</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+    
+</body>
+</html>

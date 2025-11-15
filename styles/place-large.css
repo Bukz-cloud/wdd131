@@ -1,0 +1,20 @@
+@media (min-width: 700px) {
+
+    .hero {
+        position: relative;
+    }
+
+    .data-card {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        width: 260px;
+    }
+
+    .weather-card {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        width: 260px;
+    }
+}
