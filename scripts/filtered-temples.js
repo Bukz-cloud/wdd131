@@ -60,21 +60,21 @@ const temples = [
     location: "Accra, Ghana",
     dedicated: "2004, January, 11",
     area: 17500,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-lds-261013-wallpaper.jpg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
   },
   {
     templeName: "São Paulo Brazil",
     location: "São Paulo, Brazil",
     dedicated: "1978, October, 30",
     area: 59246,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sao-paulo-brazil/400x250/sao-paulo-brazil-temple-lds-1160155-wallpaper.jpg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
   },
   {
     templeName: "Salt Lake Temple",
     location: "Salt Lake City, Utah, USA",
     dedicated: "1893, April, 6",
     area: 382207,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-1108233.jpg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
   }
 ];
 
@@ -98,6 +98,9 @@ function createTempleCard(templesToDisplay) {
         img.src = temple.imageUrl;
         img.alt = `${temple.templeName} Temple`;
         img.loading = "lazy";
+
+        img.width = 400; 
+        img.height = 250; 
 
         card.appendChild(name);
         card.appendChild(location);
