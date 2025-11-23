@@ -98,6 +98,7 @@ function createTempleCard(templesToDisplay) {
         img.src = temple.imageUrl;
         img.alt = `${temple.templeName} Temple`;
         img.loading = "lazy";
+        img.decoding = "async";
 
         img.width = 400; 
         img.height = 250; 
