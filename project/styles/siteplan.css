@@ -1,0 +1,40 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #B3F4C0;
+}
+
+header {
+    background-color: #430575;
+    color: #fff;
+}
+
+h1, h2 {
+    padding: 10px;
+}
+
+p {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+.wireframe {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 20px;
+    justify-items: center;
+}
+
+.wireframe h2 {
+    padding-left: 10px;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #430575;
+    color: #fff;
+}
