@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="Our customer's satisfaction is of great value to us. Which is why a product review form is presented on this page, to be completed by our esteemed customers.">
+    <meta name="author" content="Olubukade John Adesanmi">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="iproduct">
+            <fieldset>
+                <label id="ipname">Product Name*
+                    <select id="product" name="product" required>
+                        <option value="">Select a Product...</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <div id="irating">Overall Rating*</div>
+                <label><input type="radio" id="star" name="star" required>&star;</label>
+                <label><input type="radio" id="star" name="star" required>&star; &star;</label>
+                <label><input type="radio" id="star" name="star" required>&star; &star; &star;</label>
+                <label><input type="radio" id="star" name="star" required>&star; &star; &star; &star;</label>
+                <label><input type="radio" id="star" name="star" required>&star; &star; &star; &star; &star;</label>
+            </fieldset>
+            <fieldset>
+                <label class="install">Date of Installation*<input type="date" id="date" name="date" required></label>
+            </fieldset>
+
+            <fieldset>
+                <div id="icheck">Useful Features</div>
+                <label><input type="checkbox" id="features" name="text" value="durability">Durability</label>
+                <label><input type="checkbox" id="features" name="text" value="design">Design</label>
+                <label><input type="checkbox" id="features" name="text" value="usage">Ease of Use</label>
+                <label><input type="checkbox" id="features" name="text" value="performance">Performance</label>
+            </fieldset>
+
+            <fieldset>
+                <label for="review" id="ireview">Review our product.</label>
+                <textarea id="review" name="review" rows="5" cols="33"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <label id="iname">User Name (optional)<input type="text" id="uname" name="uname"></label>
+            </fieldset>
+            <input type="submit" value="Review Product" id="isubmit">
+        </form>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span> ⌛ Olubukade John Adesanmi ⌛ South Africa</p>
+        <p><span id="lastModified"></span></p>
+    </footer> 
+    
+</body>
+</html>
