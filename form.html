@@ -20,36 +20,52 @@
         <div class="container">
             <form method="get" action="review.html">
                 
-                <label>Product Name</label>
+                <label for="productSelect">Product Name</label>
                 <select id="productSelect" name="product" required>
-                    <option value="">Select a Product ...</option>
+                    <option value="" disabled selected>Select a Product ...</option>
                 </select>
                 
                 <label>Overall Rating</label>
                 <div class="rating-stars">
-                    <label><input type="radio" id="one-star" name="rating" value="1" required> ⭐</label>
-                    <label><input type="radio" id="two-stars" name="rating" value="2" required> ⭐⭐</label>
-                    <label><input type="radio" id="three-stars" name="rating" value="3" required> ⭐⭐⭐</label>
-                    <label><input type="radio" id="four-stars" name="rating" value="4" required> ⭐⭐⭐⭐</label>
-                    <label><input type="radio" id="four-stars" name="rating" value="5" required> ⭐⭐⭐⭐⭐</label>
+                    <label for="one-star">⭐</label>
+                    <input type="radio" id="one-star" name="rating" value="1">
+
+                    <label for="two-stars">⭐⭐</label>
+                    <input type="radio" id="two-stars" name="rating" value="2">
+
+                    <label for="three-stars">⭐⭐⭐</label>
+                    <input type="radio" id="three-stars" name="rating" value="3">
+
+                    <label for="four-stars">⭐⭐⭐⭐</label>
+                    <input type="radio" id="four-stars" name="rating" value="4">
+
+                    <label for="five-stars">⭐⭐⭐⭐⭐</label>
+                    <input type="radio" id="five-stars" name="rating" value="5">
                 </div>
                 
-                <label>Date of Installation</label>
+                <label for="install">Date of Installation</label>
                 <input type="date" id="install" name="date" required>
                 
                 <label>Useful Features</label>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" id="feature-1" name="features" value="Durability"> Durability</label><br>
-                    <label><input type="checkbox" id="feature-2" name="features" value="Ease of Use"> Ease of Use</label><br>
-                    <label><input type="checkbox" id="feature-3" name="features" value="Performance"> Performance</label><br>
-                    <label><input type="checkbox" id="feature-4" name="features" value="Design"> Design</label>
+                    <label for="feature-1">Durability</label>
+                    <input type="checkbox" id="feature-1" name="features" value="Durability">
+
+                    <label for="feature-2">Ease of Use</label>
+                    <input type="checkbox" id="feature-2" name="features" value="Ease of Use">
+
+                    <label for="feature-3">Performance</label>
+                    <input type="checkbox" id="feature-3" name="features" value="Performance">
+
+                    <label for="feature-4">Design</label>
+                    <input type="checkbox" id="feature-4" name="features" value="Design">
                 </div>
                 
-                <label>Written Review (Optional)</label>
+                <label for="reviewText">Written Review (Optional)</label>
                 <textarea id="reviewText" name="review"></textarea>
                 
-                <label>User Name <span id="optional">(Optional)</span></label>
-                <input type="text" id="text" name="name">
+                <label for="uname">User Name <span id="optional">(Optional)</span></label>
+                <input type="text" id="uname" name="name">
                 
                 <button type="submit">Review Product</button>
                 
