@@ -75,7 +75,7 @@ button:hover {
 }
 
 .review-body h1 {
-    color: #000;
+    color: #fff;
 }
 
 #reviewCounter {
@@ -88,6 +88,10 @@ button:hover {
     background-color: #fff;
     margin: 20px;
     text-align: center;
+}
+
+.footReview {
+    color: #000;
 }
 
 footer {

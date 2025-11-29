@@ -1,6 +1,4 @@
-// ----------------------------
 // Footer: Current year + Last Modified
-// ----------------------------
 const currentYear = new Date().getFullYear();
 const yearElem = document.getElementById("currentyear");
 if (yearElem) yearElem.textContent = currentYear;
@@ -8,10 +6,7 @@ if (yearElem) yearElem.textContent = currentYear;
 const lastModElem = document.getElementById("lastModified");
 if (lastModElem) lastModElem.textContent = `Last modified: ${document.lastModified}`;
 
-
-// ----------------------------
-// PRODUCT ARRAY
-// ----------------------------
+// Product Array
 const products = [
   { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
   { id: "fc-2050", name: "power laces", averagerating: 4.7 },
@@ -21,14 +16,10 @@ const products = [
 ];
 
 
-// ----------------------------
 // Run when DOM is ready
-// ----------------------------
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ----------------------------
   // Populate Product Dropdown (index page)
-  // ----------------------------
   const select = document.getElementById("productSelect");
 
   if (select) {
@@ -40,10 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
-  // ----------------------------
   // Review Summary Page Handling
-  // ----------------------------
   const params = new URLSearchParams(window.location.search);
 
   function writeValue(id, value) {
@@ -64,10 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     featuresElem.textContent = features.length ? features.join(", ") : "None";
   }
 
-
-  // ----------------------------
   // LocalStorage Review Counter
-  // ----------------------------
   const counterElem = document.getElementById("reviewCounter");
 
   if (counterElem) {
@@ -78,4 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
     counterElem.textContent = count;
   }
 
+});
+
+document.getElementById("clearCounterBtn").addEventListener("click", () => {
+    localStorage.removeItem("reviewCount");
+    document.getElementById("reviewCounter").textContent = 0;
 });
