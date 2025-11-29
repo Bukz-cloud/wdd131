@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-h1 {
+header {
     text-align: center;
     color: white;
     padding: 15px 0;
@@ -63,6 +63,33 @@ button:hover {
     color: red;
 }
 
+.review-body {
+    background-color: #eee;
+}
+/*style="background:white; box-shadow:0 0 10px #aaa;"*/
+.container-2 {
+    background-color: #fff;
+    box-shadow: 0 0 10px #aaa;
+    color: #000;
+    padding-left: 20px;
+}
+
+.container-2 h1 {
+    color: #000;
+}
+
+#reviewCounter {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.review-container {
+    background-color: #fff;
+    margin: 20px;
+    text-align: center;
+}
+
 footer {
     text-align: center;
     color: white;
@@ -76,18 +103,4 @@ footer {
         margin: 15px;
         padding: 15px;
     }
-}
-
-.review-body {
-    background-color: #eee;
-}
-
-.review-container {
-    background-color: #fff;
-    box-shadow: 0 0 10px #aaa;
-}
-
-.review-h {
-    color: #000;
-    background-color: none;
 }
