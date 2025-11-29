@@ -16,45 +16,46 @@
     <header>   
         <h1>Product Review</h1>
     </header>
-
-    <div class="container">
-    <form method="get" action="review.html">
-
-        <label>Product Name</label>
-        <select id="productSelect" name="product" required>
-            <option value="">Select a Product ...</option>
-        </select>
-
-        <label>Overall Rating</label>
-        <div class="rating-stars">
-        <label><input type="radio" id="one-star" name="rating" value="1" required> ⭐</label>
-        <label><input type="radio" id="two-stars" name="rating" value="2" required> ⭐⭐</label>
-        <label><input type="radio" id="three-stars" name="rating" value="3" required> ⭐⭐⭐</label>
-        <label><input type="radio" id="four-stars" name="rating" value="4" required> ⭐⭐⭐⭐</label>
-        <label><input type="radio" id="four-stars" name="rating" value="5" required> ⭐⭐⭐⭐⭐</label>
+    <main>    
+        <div class="container">
+            <form method="get" action="review.html">
+                
+                <label>Product Name</label>
+                <select id="productSelect" name="product" required>
+                    <option value="">Select a Product ...</option>
+                </select>
+                
+                <label>Overall Rating</label>
+                <div class="rating-stars">
+                    <label><input type="radio" id="one-star" name="rating" value="1" required> ⭐</label>
+                    <label><input type="radio" id="two-stars" name="rating" value="2" required> ⭐⭐</label>
+                    <label><input type="radio" id="three-stars" name="rating" value="3" required> ⭐⭐⭐</label>
+                    <label><input type="radio" id="four-stars" name="rating" value="4" required> ⭐⭐⭐⭐</label>
+                    <label><input type="radio" id="four-stars" name="rating" value="5" required> ⭐⭐⭐⭐⭐</label>
+                </div>
+                
+                <label>Date of Installation</label>
+                <input type="date" id="install" name="date" required>
+                
+                <label>Useful Features</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="feature-1" name="features" value="Durability"> Durability</label><br>
+                    <label><input type="checkbox" id="feature-2" name="features" value="Ease of Use"> Ease of Use</label><br>
+                    <label><input type="checkbox" id="feature-3" name="features" value="Performance"> Performance</label><br>
+                    <label><input type="checkbox" id="feature-4" name="features" value="Design"> Design</label>
+                </div>
+                
+                <label>Written Review (Optional)</label>
+                <textarea id="reviewText" name="review"></textarea>
+                
+                <label>User Name <span id="optional">(Optional)</span></label>
+                <input type="text" id="text" name="name">
+                
+                <button type="submit">Review Product</button>
+                
+            </form>
         </div>
-
-        <label>Date of Installation</label>
-        <input type="date" id="install" name="date" required>
-
-        <label>Useful Features</label>
-        <div class="checkbox-group">
-        <label><input type="checkbox" id="feature-1" name="features" value="Durability"> Durability</label><br>
-        <label><input type="checkbox" id="feature-2" name="features" value="Ease of Use"> Ease of Use</label><br>
-        <label><input type="checkbox" id="feature-3" name="features" value="Performance"> Performance</label><br>
-        <label><input type="checkbox" id="feature-4" name="features" value="Design"> Design</label>
-        </div>
-
-        <label>Written Review (Optional)</label>
-        <textarea id="reviewText" name="review"></textarea>
-
-        <label>User Name <span id="optional">(Optional)</span></label>
-        <input type="text" id="text" name="name">
-
-        <button type="submit">Review Product</button>
-
-    </form>
-    </div>
+    </main>
     <footer>
         <p>©<span id="currentyear"></span> ⌛ Olubukade John Adesanmi ⌛ South Africa</p>
         <p><span id="lastModified"></span></p>
