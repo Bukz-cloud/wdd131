@@ -13,49 +13,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Product Review</h1>
-    </header>
-    <main>
-        <form method="get" action="review.html" class="iproduct">
-            <fieldset>
-                <label id="ipname">Product Name*
-                    <select id="product" name="product" required>
-                        <option value="">Select a Product...</option>
-                    </select>
-                </label>
-            </fieldset>
-            <fieldset>
-                <div id="irating">Overall Rating*</div>
-                <label><input type="radio" id="star" name="star" required>&star;</label>
-                <label><input type="radio" id="star" name="star" required>&star; &star;</label>
-                <label><input type="radio" id="star" name="star" required>&star; &star; &star;</label>
-                <label><input type="radio" id="star" name="star" required>&star; &star; &star; &star;</label>
-                <label><input type="radio" id="star" name="star" required>&star; &star; &star; &star; &star;</label>
-            </fieldset>
-            <fieldset>
-                <label class="install">Date of Installation*<input type="date" id="date" name="date" required></label>
-            </fieldset>
 
-            <fieldset>
-                <div id="icheck">Useful Features</div>
-                <label><input type="checkbox" id="features" name="text" value="durability">Durability</label>
-                <label><input type="checkbox" id="features" name="text" value="design">Design</label>
-                <label><input type="checkbox" id="features" name="text" value="usage">Ease of Use</label>
-                <label><input type="checkbox" id="features" name="text" value="performance">Performance</label>
-            </fieldset>
+<h1>Product Review</h1>
 
-            <fieldset>
-                <label for="review" id="ireview">Review our product.</label>
-                <textarea id="review" name="review" rows="5" cols="33"></textarea>
-            </fieldset>
+<div class="container">
+  <form method="get" action="review.html">
 
-            <fieldset>
-                <label id="iname">User Name (optional)<input type="text" id="uname" name="uname"></label>
-            </fieldset>
-            <input type="submit" value="Review Product" id="isubmit">
-        </form>
-    </main>
+    <label>Product Name</label>
+    <select id="productSelect" name="product">
+      <option value="">Choose a Product ...</option>
+    </select>
+
+    <label>Overall Rating</label>
+    <div class="rating-stars">
+      <label><input type="radio" name="rating" value="1"> ⭐</label>
+      <label><input type="radio" name="rating" value="2"> ⭐⭐</label>
+      <label><input type="radio" name="rating" value="3"> ⭐⭐⭐</label>
+      <label><input type="radio" name="rating" value="4"> ⭐⭐⭐⭐</label>
+      <label><input type="radio" name="rating" value="5"> ⭐⭐⭐⭐⭐</label>
+    </div>
+
+    <label>Date of Installation</label>
+    <input type="date" name="date">
+
+    <label>Useful Features</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="features" value="Durability"> Durability</label><br>
+      <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label><br>
+      <label><input type="checkbox" name="features" value="Performance"> Performance</label><br>
+      <label><input type="checkbox" name="features" value="Design"> Design</label>
+    </div>
+
+    <label>Written Review (Optional)</label>
+    <textarea name="review"></textarea>
+
+    <label>Your Name (Optional)</label>
+    <input type="text" name="name">
+
+    <button type="submit">Review Product</button>
+
+  </form>
+</div>
     <footer>
         <p>©<span id="currentyear"></span> ⌛ Olubukade John Adesanmi ⌛ South Africa</p>
         <p><span id="lastModified"></span></p>
