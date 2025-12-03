@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Olubukade John Adesanmi">
+    <meta name="description" content="Welcome to ABJ Real Estate homepage. We render housing services our recently listed properties and other services are presented on this page.">
+    <title>ABJ Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="home.html" class="brand" aria-label="ABJ Real Estate Home">
+        <img src="images/abj-logo.svg" alt="ABJ Real Estate logo" width="160" height="48">
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="buy.html">Purchase</a></li>
+          <li><a href="rent.html">Rent</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-controls="main-menu" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container page-intro" aria-labelledby="buy-title">
+      <h1 id="buy-title">Properties for Sale</h1>
+      <p class="lead">Browse the latest properties available to buy. Use filters and save favorites for later.</p>
+    </section>
+
+    <section class="container listings" aria-labelledby="listings-title">
+      <h2 id="listings-title">Available Properties</h2>
+      <div id="buyList" class="cards">
+        <!-- JS will render cards filtered for buy -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="currentyear"></span>⌛ ABJ Real Estate ⌛ Shelter for All ⌛</p>
+      <p><a href="contact.html">Contact us</a> · <a href="index.html">Privacy</a></p>
+      <p><span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
