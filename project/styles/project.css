@@ -199,6 +199,7 @@ body{
 }
 .card{
   background:#fff;
+  color: #000;
   border-radius:8px;
   overflow:hidden;
   box-shadow:0 6px 18px rgba(20,30,40,0.06);
