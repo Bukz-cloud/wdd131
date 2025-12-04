@@ -26,7 +26,7 @@ body{
   width:calc(100% - 2*var(--container-pad));
   max-width:var(--max-width);
   margin:0 auto;
-  padding:calc(var(--container-pad));
+  padding: 0;
 }
 
 /* Header / Nav */
@@ -47,8 +47,8 @@ body{
 
 .brand img {
   display:block; 
-  height:auto; 
-  max-height:48px;
+  width: 120px;
+  height: auto;
 }
 
 .main-nav ul{
