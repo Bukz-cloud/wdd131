@@ -29,7 +29,6 @@ body{
   padding: 0;
 }
 
-/* Header / Nav */
 .site-header{
   background:var(--brand);
   color:#fff;
@@ -72,9 +71,6 @@ body{
   color:var(--accent);
 }
 
-/* -----------------------------------------
-   MOBILE NAVIGATION
--------------------------------------------- */
 .nav-toggle{
   display: block;
   background: var(--brand);
@@ -87,7 +83,7 @@ body{
 }
 
 .main-nav {
-  display: none; /* Hidden until button click */
+  display: none; 
   background: #222;
   padding: 15px;
   border-radius: 10px;
@@ -119,9 +115,6 @@ body{
   border-radius: 6px;
 }
 
-/* -----------------------------------------
-   HERO SECTION
--------------------------------------------- */
 .hero{
   position:relative;
   min-height:72vh;
@@ -149,7 +142,6 @@ body{
   z-index:2;
 }
 
-/* search box */
 .hero-search{
   margin-top:24px;
   position:relative;
@@ -166,7 +158,6 @@ body{
   max-width:100%;
 }
 
-/* Fix hidden dropdown options */
 .search-form input,
 .search-form select{
   padding:10px;
@@ -187,11 +178,9 @@ body{
 .btn{cursor:pointer;border:0;padding:10px 16px;border-radius:6px}
 .btn-primary{background:var(--brand); color:#fff; font-weight:700}
 
-/* content */
 .features{padding:40px 0}
 .lead{color:#000; margin-bottom:20px}
 
-/* cards grid */
 .cards{
   display:grid;
   gap:18px;
@@ -212,17 +201,14 @@ body{
 .card-meta{color:#000; font-size:0.95rem}
 .card-actions{display:flex; gap:10px; margin-top:auto; align-items:center}
 
-/* favorites*/
 .favorites{padding:30px 0}
 
-/* form styles */
 .form-row{margin-bottom:12px; display:flex; flex-direction:column}
 label{font-weight:600; margin-bottom:6px}
 input[type="text"], input[type="email"], textarea{
   padding:10px; border:1px solid #d7d7d7; border-radius:6px; font-size:1rem
 }
 
-/* footer */
 .site-footer{
   padding:20px 0; 
   border-top:1px solid #eee; 
@@ -234,15 +220,10 @@ input[type="text"], input[type="email"], textarea{
 .site-footer p {margin:6px 0; color:#fff;}
 .site-footer p a {color:#fff;}
 
-/* utilities */
 .visually-hidden{
   position:absolute !important;
   height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;
 }
-
-/* -----------------------------------------
-   RESPONSIVE
--------------------------------------------- */
 
 @media (max-width:900px){
   .search-form{
@@ -251,9 +232,6 @@ input[type="text"], input[type="email"], textarea{
   }
 }
 
-/* -----------------------------------------
-   WIDE SCREEN NAVIGATION
--------------------------------------------- */
 @media (min-width:740px){
 
   .nav-toggle{

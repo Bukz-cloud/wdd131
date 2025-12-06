@@ -2,18 +2,8 @@ const currentYear = new Date().getFullYear();
 document.getElementById("currentyear").innerHTML = `${currentYear}`;
 document.getElementById("lastModified").innerHTML = `Last modified: ${document.lastModified}`;
 
-/* script.js
-   Implements:
-   - slideshow with lazy-aware loading
-   - rendering of property cards (objects/array/array methods)
-   - search/filter with conditional branching
-   - save favorites to localStorage
-   - DOM interactions and event listeners
-   - template literals exclusively for building dynamic HTML
-*/
-
 (() => {
-  // ---------- Data (listings) ----------
+
   const listings = [
     {
       id: "p1",
@@ -61,7 +51,6 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     }
   ];
 
-  // ---------- Globals ----------
   const hero = document.getElementById('hero');
   const featuredListEl = document.getElementById('featuredList');
   const favoritesListEl = document.getElementById('favoritesList');
@@ -76,14 +65,13 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
   let slideIndex = 0;
   let slideInterval = null;
 
-  // ---------- Local Storage ----------
   const LS_KEYS = {favorites: "abj:favoriteProperties", visitCount:"abj:visitCount"};
 
   function saveToLocalStorage(key, value){
     try{
       localStorage.setItem(key, JSON.stringify(value));
     } catch (e) {
-      // localStorage might be disabled — fallback noop
+      
       console.warn('LocalStorage save failed', e);
     }
   }
@@ -98,14 +86,13 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     }
   }
 
-  // ---------- Slideshow functions ----------
   function setHeroBackground(src){
-    // use template literal for CSS url
+    
     hero.style.backgroundImage = `url("${src}")`;
   }
 
   function startSlideshow(){
-    // lazy-aware: don't start if hero not in viewport; IntersectionObserver handles it
+    
     if (slideInterval) return;
     setHeroBackground(SLIDES[slideIndex].src);
     slideInterval = setInterval(() => {
@@ -121,9 +108,7 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     }
   }
 
-  // ---------- Render functions (use template literals) ----------
   function createCardHTML(item){
-    // template literal exclusively
     return `
       <article class="card" data-id="${item.id}" aria-labelledby="title-${item.id}">
         <picture>
@@ -143,7 +128,7 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
   }
 
   function formatPrice(price){
-    // price > 10000 => currency style, else monthly rate label
+   
     if (price > 10000){
       return `R ${price.toLocaleString()}`;
     } else {
@@ -151,9 +136,9 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     }
   }
 
-  // ---------- Render listing groups ----------
+  
   function renderFeatured(){
-    // pick first 3
+   
     const featured = listings.slice(0,3);
     const html = featured.map(item => createCardHTML(item)).join('');
     if (featuredListEl) featuredListEl.innerHTML = html;
@@ -177,7 +162,7 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     rentListEl.innerHTML = html;
   }
 
-  // ---------- Favorites handling ----------
+  
   function getFavorites(){
     return loadFromLocalStorage(LS_KEYS.favorites, []);
   }
@@ -232,7 +217,7 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     });
   }
 
-  // ---------- Search / Filter ----------
+  
   function handleSearchSubmit(e){
     e.preventDefault();
     const q = (document.getElementById('q') || {value:''}).value.trim().toLowerCase();
@@ -241,7 +226,7 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     const beds = (document.getElementById('beds') || {value:''}).value;
 
     const filtered = listings.filter(item => {
-      // conditional branching and array methods used
+     
       let match = true;
       if (q){
         const combined = `${item.title} ${item.alt}`.toLowerCase();
@@ -261,25 +246,25 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
       return match;
     });
 
-    // render results into featured / main lists (re-use featured area)
+    
     if (featuredListEl){
       featuredListEl.innerHTML = filtered.length
         ? filtered.map(i => createCardHTML(i)).join('')
         : `<p>No properties found that match your criteria.</p>`;
     }
-    // attach listeners for new buttons after render
+    
     attachCardEventHandlers();
   }
 
-  // ---------- Event delegation for card buttons ----------
+  
   function attachCardEventHandlers(){
-    // favorite/save buttons
+    
     document.querySelectorAll('.btn-fav').forEach(btn => {
       btn.removeEventListener('click', favClickHandler);
       btn.addEventListener('click', favClickHandler);
     });
 
-    // remove buttons in favorites
+    
     document.querySelectorAll('.btn-remove').forEach(btn => {
       btn.removeEventListener('click', removeClickHandler);
       btn.addEventListener('click', removeClickHandler);
@@ -292,10 +277,10 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
   }
   function removeClickHandler(e){
     const id = e.currentTarget.dataset.id;
-    toggleFavorite(id); // toggle will remove
+    toggleFavorite(id); 
   }
 
-  // ---------- Contact form ----------
+ 
   function handleContactSubmit(e){
     e.preventDefault();
     const name = document.getElementById('name');
@@ -303,16 +288,16 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     const message = document.getElementById('message');
     const feedback = document.getElementById('contactFeedback');
 
-    // simple validation
+    
     if (!name.value.trim() || !email.value.trim() || !message.value.trim()){
       feedback.textContent = 'Please complete all required fields.';
       feedback.style.color = 'crimson';
       return;
     }
 
-    // create a message object and persist locally (simulated send)
+    
     const msg = {id: `m${Date.now()}`, name: name.value.trim(), email: email.value.trim(), message: message.value.trim(), sentAt: new Date().toISOString()};
-    // store in localStorage under a messages array (example of using objects & arrays)
+    
     const existing = loadFromLocalStorage('abj:messages', []);
     existing.push(msg);
     saveToLocalStorage('abj:messages', existing);
@@ -322,7 +307,7 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     e.target.reset();
   }
 
-  // ---------- small-screen nav toggle ----------
+  
   function setupNavToggle(){
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.main-nav');
@@ -336,10 +321,10 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
   }
 
 
-  // ---------- lazy hero: start slideshow when visible ----------
+  
   function setupHeroLazyStart(){
     if (!('IntersectionObserver' in window)) {
-      // fallback: start immediately
+      
       startSlideshow();
       return;
     }
@@ -348,7 +333,7 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
         if (entry.isIntersecting) {
           startSlideshow();
         } else {
-          // pause to conserve resources when scrolled away
+          
           stopSlideshow();
         }
       });
@@ -356,20 +341,20 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     io.observe(hero);
   }
 
-  // ---------- Visit count (localStorage example) ----------
+  
   function trackVisit(){
     let count = loadFromLocalStorage(LS_KEYS.visitCount, 0) || 0;
     count++;
     saveToLocalStorage(LS_KEYS.visitCount, count);
-    // reflect in footer(s)
+    
     document.querySelectorAll('#year, #year-buy, #year-rent, #year-contact').forEach(el => {
       if (el) el.textContent = new Date().getFullYear();
     });
   }
 
-  // ---------- initialize page-specific behaviours ----------
+  
   function init(){
-    // render main / featured lists
+    
     renderFeatured();
     renderBuyList();
     renderRentList();
@@ -378,17 +363,17 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     attachCardEventHandlers();
     trackVisit();
 
-    // search form
+    
     const searchForm = document.getElementById('searchForm');
     if (searchForm) searchForm.addEventListener('submit', handleSearchSubmit);
 
-    // contact form
+    
     const contactForm = document.getElementById('contactForm');
     if (contactForm) contactForm.addEventListener('submit', handleContactSubmit);
 
-    // delegate click from document for new elements later too
+    
     document.addEventListener('click', (e) => {
-      // if a property card image clicked, open contact page with intent (example)
+      
       if (e.target.matches('.card img')){
         window.location.href = 'contact.html';
       }
@@ -397,10 +382,8 @@ document.getElementById("lastModified").innerHTML = `Last modified: ${document.l
     setupNavToggle();
     setupHeroLazyStart();
 
-    // accessibility: ensure search inputs have usable placeholders, labels exist in markup
   }
 
-  // ---------- run init after DOM ready ----------
   if (document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', init);
   } else {
